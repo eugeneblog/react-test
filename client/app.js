@@ -11,6 +11,7 @@ import { Provider } from 'mobx-react'
 // ReactDOM.hydrate(<App />, document.getElementById('root'))
 const rootNode = document.getElementById('root')
 const render = Component => {
+    // 使用 Provider 组件用来包裹最外层组件节点，并且传入 store（通过）context 传递给后代组件
     ReactDOM.hydrate(
         <AppContainer>
             <Provider appState = {appState}>
